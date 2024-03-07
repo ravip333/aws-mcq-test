@@ -20,7 +20,7 @@
      return array;
    }
    // Fetch questions from GitHub Pages
-   fetch('https://github.com/ravip333/aws-mcq-test/blob/main/questions.json')
+   fetch('https://github.com/ravip333/aws-mcq-test/questions.json')
      .then(response => response.json())
      .then(data => {
        // Shuffle questions randomly

@@ -1,68 +1,23 @@
 const quizData = [
   {
-    question: 'What is the capital of France?',
-    options: ['Paris', 'London', 'Berlin', 'Madrid'],
-    answer: 'Paris','London',
+    question: 'Which set of Amazon S3 features helps to prevent and recover from accidental data loss?',
+    options: ['Object lifecycle and service access logging.', ' Object versioning and Multi-factor authentication.', 'Access controls and server-side encryption.', 'Website hosting and Amazon S3 policies.'],
+    answer: 'Object versioning and Multi-factor authentication',
   },
   {
-    question: 'What is the largest planet in our solar system?',
-    options: ['Mars', 'Saturn', 'Jupiter', 'Neptune'],
-    answer: 'Jupiter',
+    question: 'What is the minimum time Interval for the data that Amazon CloudWatch receives and aggregates?',
+    options: ['One second.', 'Five seconds', 'One minute', 'Three minutes','Five minutes.'],
+    answer: 'One second.',
   },
   {
-    question: 'Which country won the FIFA World Cup in 2018?',
-    options: ['Brazil', 'Germany', 'France', 'Argentina'],
+    question: 'A user has launched an EC2 instance. The instance got terminated as soon as it was launched. Which of the below mentioned options is not a possible reason for this?',
+    options: ['The user account has reached the maximum volume limit.', 'The AMI is missing. It is the required part.', 'The snapshot is corrupt.', 'The user account has reached the maximum EC2 instance limit.'],
     answer: 'France',
   },
   {
     question: 'What is the tallest mountain in the world?',
     options: ['Mount Everest', 'K2', 'Kangchenjunga', 'Makalu'],
-    answer: 'Mount Everest',
-  },
-  {
-    question: 'Which is the largest ocean on Earth?',
-    options: [
-      'Pacific Ocean',
-      'Indian Ocean',
-      'Atlantic Ocean',
-      'Arctic Ocean',
-    ],
-    answer: 'Pacific Ocean',
-  },
-  {
-    question: 'What is the chemical symbol for gold?',
-    options: ['Au', 'Ag', 'Cu', 'Fe'],
-    answer: 'Au',
-  },
-  {
-    question: 'Who painted the Mona Lisa?',
-    options: [
-      'Pablo Picasso',
-      'Vincent van Gogh',
-      'Leonardo da Vinci',
-      'Michelangelo',
-    ],
-    answer: 'Leonardo da Vinci',
-  },
-  {
-    question: 'Which planet is known as the Red Planet?',
-    options: ['Mars', 'Venus', 'Mercury', 'Uranus'],
-    answer: 'Mars',
-  },
-  {
-    question: 'What is the largest species of shark?',
-    options: [
-      'Great White Shark',
-      'Whale Shark',
-      'Tiger Shark',
-      'Hammerhead Shark',
-    ],
-    answer: 'Whale Shark',
-  },
-  {
-    question: 'Which animal is known as the King of the Jungle?',
-    options: ['Lion', 'Tiger', 'Elephant', 'Giraffe'],
-    answer: 'Lion',
+    answer: 'The user account has reached the maximum EC2 instance limit.',
   },
 ];
 

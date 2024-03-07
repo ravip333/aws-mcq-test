@@ -3,23 +3,13 @@
    {
      "question": "What is the capital of France?",
      "options": ["Berlin", "London", "Paris", "Madrid"],
-     "correctAnswer": "Paris",
+     "correctAnswer": "Paris"
    },
    {
      "question": "Which planet is known as the Red Planet?",
      "options": ["Earth", "Mars", "Venus", "Jupiter"],
      "correctAnswer": "Mars"
-   },
-   {
-     "question": "What is the largest mammal on Earth?",
-     "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
-     "correctAnswer": "Blue Whale"
-   },
-   {
-     "question": "Who wrote 'Romeo and Juliet'?",
-     "options": ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"],
-     "correctAnswer": "William Shakespeare"
    }
-   
+   // Add more questions as needed
  ]
 }

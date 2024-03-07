@@ -1,98 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Application</title>
-<style>
-   body {
-     font-family: 'Arial', sans-serif;
-     text-align: center;
-   }
-   #quiz-container {
-     max-width: 600px;
-     margin: auto;
-   }
-   #result-container {
-     margin-top: 20px;
-   }
-</style>
+  <title>JavaScript Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="quiz-container">
-<h1>Quiz Application</h1>
-<div id="question-container"></div>
-<div id="options-container"></div>
-<button onclick="nextQuestion()">Next Question</button>
-</div>
-<div id="result-container" style="display: none;">
-<h2>Quiz Results</h2>
-<p id="score"></p>
-</div>
-<script>
-   const questions = [
-     {
-       question: "What is the capital of France?",
-       options: ["Berlin", "London", "Paris", "Madrid"],
-       correctAnswer: "Paris"
-     },
-     {
-       question: "Which planet is known as the Red Planet?",
-       options: ["Earth", "Mars", "Venus", "Jupiter"],
-       correctAnswer: "Mars"
-     },
-     // Add more questions as needed
-   ];
-   let currentQuestionIndex = 0;
-   let userScore = 0;
-   function startQuiz() {
-     displayQuestion();
-   }
-   function displayQuestion() {
-     const currentQuestion = questions[currentQuestionIndex];
-     const questionContainer = document.getElementById("question-container");
-     const optionsContainer = document.getElementById("options-container");
-     const nextButton = document.querySelector("button");
-     questionContainer.textContent = currentQuestion.question;
-     optionsContainer.innerHTML = "";
-     currentQuestion.options.forEach((option, index) => {
-       const button = document.createElement("button");
-       button.textContent = option;
-       button.onclick = () => checkAnswer(index);
-       optionsContainer.appendChild(button);
-     });
-     if (currentQuestionIndex === questions.length - 1) {
-       nextButton.textContent = "Finish Quiz";
-       nextButton.onclick = showResults;
-     } else {
-       nextButton.textContent = "Next Question";
-       nextButton.onclick = nextQuestion;
-     }
-   }
-   function checkAnswer(selectedIndex) {
-     const currentQuestion = questions[currentQuestionIndex];
-     if (currentQuestion.options[selectedIndex] === currentQuestion.correctAnswer) {
-       userScore++;
-     }
-   }
-   function nextQuestion() {
-     currentQuestionIndex++;
-     if (currentQuestionIndex < questions.length) {
-       displayQuestion();
-     } else {
-       showResults();
-     }
-   }
-   function showResults() {
-     const resultContainer = document.getElementById("result-container");
-     const scoreContainer = document.getElementById("score");
-     const quizContainer = document.getElementById("quiz-container");
-     scoreContainer.textContent = `Your score: ${userScore} out of ${questions.length}`;
-     resultContainer.style.display = "block";
-     quizContainer.style.display = "none";
-   }
-   // Start the quiz when the page loads
-   window.onload = startQuiz;
-</script>
+  <div class="container">
+    <h1>Quiz App</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <button id="retry" class="button hide">Retry</button>
+    <button id="showAnswer" class="button hide">Show Answer</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

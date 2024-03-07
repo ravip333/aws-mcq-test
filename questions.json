@@ -3,7 +3,7 @@
    {
      "question": "What is the capital of France?",
      "options": ["Berlin", "London", "Paris", "Madrid"],
-     "correctAnswer": "Paris","London"
+     "correctAnswer": "Paris",
    },
    {
      "question": "Which planet is known as the Red Planet?",

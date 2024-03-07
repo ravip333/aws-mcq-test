@@ -11,72 +11,53 @@
 <button id="submit-button">Submit</button>
 <div id="results-container" style="display: none;"></div>
 <script>
-   function fetchQuestions() {
- const script = document.createElement('script');
- script.src = 'https://ravip333.github.io/aws-mcq-test/questions.json?callback=handleQuestions';
- document.head.appendChild(script);
-}
-function handleQuestions(data) {
- // Process and display questions
- const questionsContainer = document.getElementById('questions-container');
- data.questions.forEach(question => {
-   const questionElement = document.createElement('div');
-   questionElement.innerHTML = `
+   // Function to shuffle array elements randomly
+   function shuffleArray(array) {
+     for (let i = array.length - 1; i > 0; i--) {
+       const j = Math.floor(Math.random() * (i + 1));
+       [array[i], array[j]] = [array[j], array[i]];
+     }
+     return array;
+   }
+   // Fetch questions from GitHub Pages
+   fetch('https://<username>.github.io/<repository>/questions.json')
+     .then(response => response.json())
+     .then(data => {
+       // Shuffle questions randomly
+       const shuffledQuestions = shuffleArray(data.questions);
+       // Process and display questions
+       const questionsContainer = document.getElementById('questions-container');
+       shuffledQuestions.forEach(question => {
+         const questionElement = document.createElement('div');
+         questionElement.innerHTML = `
 <p>${question.question}</p>
 <ul>
-       ${question.options.map(option => `<li>${option}</li>`).join('')}
+             ${question.options.map(option => `<li>${option}</li>`).join('')}
 </ul>
-   `;
-   questionsContainer.appendChild(questionElement);
- });
-}
-//    // Function to shuffle array elements randomly
-//    function shuffleArray(array) {
-//      for (let i = array.length - 1; i > 0; i--) {
-//        const j = Math.floor(Math.random() * (i + 1));
-//        [array[i], array[j]] = [array[j], array[i]];
-//      }
-//      return array;
-//    }
-//    // Fetch questions from GitHub Pages
-//    fetch('https://github.com/ravip333/aws-mcq-test/questions.json')
-//      .then(response => response.json())
-//      .then(data => {
-//        // Shuffle questions randomly
-//        const shuffledQuestions = shuffleArray(data.questions);
-//        // Process and display questions
-//        const questionsContainer = document.getElementById('questions-container');
-//        shuffledQuestions.forEach(question => {
-//          const questionElement = document.createElement('div');
-//          questionElement.innerHTML = `
-// <p>${question.question}</p>
-// <ul>
-//              ${question.options.map(option => `<li>${option}</li>`).join('')}
-// </ul>
-//          `;
-//          questionsContainer.appendChild(questionElement);
-//        });
-//      })
-//      .catch(error => console.error('Error fetching questions:', error));
-//    // Submit button click event
-//    document.getElementById('submit-button').addEventListener('click', function() {
-//      // Evaluate answers and calculate score (replace this logic with your scoring mechanism)
-//      const score = calculateScore();
-//      // Display results
-//      const resultsContainer = document.getElementById('results-container');
-//      resultsContainer.innerHTML = `<p>Your score: ${score} out of ${shuffledQuestions.length}</p>`;
-//      resultsContainer.style.display = 'block';
-//      // Hide questions
-//      document.getElementById('questions-container').style.display = 'none';
-//      // Hide submit button
-//      this.style.display = 'none';
-//    });
-//    // Function to calculate score (replace with your scoring mechanism)
-//    function calculateScore() {
-//      // Replace this logic with your scoring mechanism
-//      // For simplicity, assume all answers are correct
-//      return shuffledQuestions.length;
-//    }
+         `;
+         questionsContainer.appendChild(questionElement);
+       });
+     })
+     .catch(error => console.error('Error fetching questions:', error));
+   // Submit button click event
+   document.getElementById('submit-button').addEventListener('click', function() {
+     // Evaluate answers and calculate score (replace this logic with your scoring mechanism)
+     const score = calculateScore();
+     // Display results
+     const resultsContainer = document.getElementById('results-container');
+     resultsContainer.innerHTML = `<p>Your score: ${score} out of ${shuffledQuestions.length}</p>`;
+     resultsContainer.style.display = 'block';
+     // Hide questions
+     document.getElementById('questions-container').style.display = 'none';
+     // Hide submit button
+     this.style.display = 'none';
+   });
+   // Function to calculate score (replace with your scoring mechanism)
+   function calculateScore() {
+     // Replace this logic with your scoring mechanism
+     // For simplicity, assume all answers are correct
+     return shuffledQuestions.length;
+   }
 </script>
 </body>
 </html>

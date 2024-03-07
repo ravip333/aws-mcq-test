@@ -10,6 +10,5 @@
      "options": ["Earth", "Mars", "Venus", "Jupiter"],
      "correctAnswer": "Mars"
    },
-   // Add more questions as needed
  ]
 }

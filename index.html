@@ -3,10 +3,39 @@
 <head>
   <title>AWS Solution Architect Practice Exam</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container">
     <h1>AWS Solution Architect Practice Exam</h1>
+    <!-- Rules Modal Button -->
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#rulesModal">
+      Rules
+    </button>
+
+    <!-- Rules Modal -->
+    <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="rulesModalLabel">Rules</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>1. This practice exam contains AWS Solution Architect-related questions.</p>
+            <p>2. Answer all the questions before submitting the exam.</p>
+            <p>3. After submitting, review your answers and check the correct ones.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="category-selector"></div>
     <div id="quiz"></div>
     <div id="result" class="result"></div>
@@ -14,6 +43,11 @@
     <button id="retry" class="button hide">Retry</button>
     <button id="showAnswer" class="button hide">Show Answer</button>
   </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

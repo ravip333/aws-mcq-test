@@ -1,4 +1,4 @@
-let quizData;
+ let quizData;
     const quizContainer = document.getElementById('quiz');
     const resultContainer = document.getElementById('result');
     const submitButton = document.getElementById('submit');
@@ -197,4 +197,3 @@ let quizData;
     showAnswerButton.addEventListener('click', showAnswer);
 
     initializeQuiz();
-  </script>

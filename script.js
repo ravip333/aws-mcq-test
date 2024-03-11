@@ -172,25 +172,3 @@ showAnswerButton.addEventListener('click', showAnswer);
 
 displayQuestion();
 
-const quizData = [
-  {
-    question.:1 'Which set of Amazon S3 features helps to prevent and recover from accidental data loss?',
-    options: ['Object lifecycle and service access logging.', ' Object versioning and Multi-factor authentication.', 'Access controls and server-side encryption.', 'Website hosting and Amazon S3 policies.'],
-    answer: 'Object versioning and Multi-factor authentication',
-  },
-  {
-    question:2 'What is the minimum time Interval for the data that Amazon CloudWatch receives and aggregates?',
-    options: ['One second.', 'Five seconds', 'One minute', 'Three minutes','Five minutes.'],
-    answer: 'One second.',
-  },
-  {
-    question:3 'A user has launched an EC2 instance. The instance got terminated as soon as it was launched. Which of the below mentioned options is not a possible reason for this?',
-    options: ['The user account has reached the maximum volume limit.', 'The AMI is missing. It is the required part.', 'The snapshot is corrupt.', 'The user account has reached the maximum EC2 instance limit.'],
-    answer: 'France',
-  },
-  {
-    question:4 'What is the tallest mountain in the world?',
-    options: ['Mount Everest', 'K2', 'Kangchenjunga', 'Makalu'],
-    answer: 'The user account has reached the maximum EC2 instance limit.',
-  },
-];

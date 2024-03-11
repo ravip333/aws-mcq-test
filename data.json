@@ -18,5 +18,15 @@
     "question": "What is the tallest mountain in the world?",
     "options": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
     "answer": "The user account has reached the maximum EC2 instance limit."
+  },
+   {
+    "question": "What is the tallest mountain in the world?",
+    "options": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+    "answer": "The user account has reached the maximum EC2 instance limit."
+  },
+   {
+    "question": "What is the tallest mountain in the world?",
+    "options": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+    "answer": "The user account has reached the maximum EC2 instance limit."
   }
 ]

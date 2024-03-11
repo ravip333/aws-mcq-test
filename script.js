@@ -30,6 +30,41 @@ const showAnswerButton = document.getElementById('showAnswer');
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
+document.addEventListener("DOMContentLoaded", function () {
+    const quizTime = 130 * 60; // Convert minutes to seconds
+    let timer = quizTime;
+
+    // Function to update the timer display
+    function updateTimer() {
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
+        document.getElementById('timer').innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    // Update the timer every second
+    const timerInterval = setInterval(function () {
+        if (timer > 0) {
+            timer--;
+            updateTimer();
+        } else {
+            clearInterval(timerInterval);
+            displayResult();
+        }
+    }, 1000);
+
+
+    function displayResult() {
+        clearInterval(timerInterval); // Stop the timer when the quiz ends
+        quizContainer.style.display = 'none';
+        submitButton.style.display = 'none';
+        retryButton.style.display = 'inline-block';
+        showAnswerButton.style.display = 'inline-block';
+        resultContainer.innerHTML = `Time's up! You scored ${score} out of ${quizData.length}!`;
+    }
+    
+    updateTimer(); // Initial display of the timer
+});
+
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {

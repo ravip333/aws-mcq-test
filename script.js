@@ -44,7 +44,7 @@
     });
 
     function fetchQuizData() {
-        const jsonUrl = 'https://raw.githubusercontent.com/your-username/your-repository/main/quiz-data.json';
+        const jsonUrl = 'https://raw.githubusercontent.com/ravip333/aws-mcq-test/main/data.json';
 
         return fetch(jsonUrl)
             .then(response => {

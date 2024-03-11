@@ -1,3 +1,26 @@
+const quizData = [
+  {
+    question: 'Which set of Amazon S3 features helps to prevent and recover from accidental data loss?',
+    options: ['Object lifecycle and service access logging.', ' Object versioning and Multi-factor authentication.', 'Access controls and server-side encryption.', 'Website hosting and Amazon S3 policies.'],
+    answer: 'Object versioning and Multi-factor authentication',
+  },
+  {
+    question: 'What is the minimum time Interval for the data that Amazon CloudWatch receives and aggregates?',
+    options: ['One second.', 'Five seconds', 'One minute', 'Three minutes','Five minutes.'],
+    answer: 'One second.',
+  },
+  {
+    question: 'A user has launched an EC2 instance. The instance got terminated as soon as it was launched. Which of the below mentioned options is not a possible reason for this?',
+    options: ['The user account has reached the maximum volume limit.', 'The AMI is missing. It is the required part.', 'The snapshot is corrupt.', 'The user account has reached the maximum EC2 instance limit.'],
+    answer: 'France',
+  },
+  {
+    question: 'What is the tallest mountain in the world?',
+    options: ['Mount Everest', 'K2', 'Kangchenjunga', 'Makalu'],
+    answer: 'The user account has reached the maximum EC2 instance limit.',
+  },
+];
+
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');
@@ -7,7 +30,6 @@ const showAnswerButton = document.getElementById('showAnswer');
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
-
 document.addEventListener("DOMContentLoaded", function () {
     const quizTime = 130 * 60; // Convert minutes to seconds
     let timer = quizTime;
@@ -30,18 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 1000);
 
-    // Fetch JSON data
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            // Store the fetched data in quizData
-            window.quizData = data;
-            // Display the first question
-            displayQuestion();
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
 
     function displayResult() {
         clearInterval(timerInterval); // Stop the timer when the quiz ends
@@ -51,11 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         showAnswerButton.style.display = 'inline-block';
         resultContainer.innerHTML = `Time's up! You scored ${score} out of ${quizData.length}!`;
     }
-
+    
     updateTimer(); // Initial display of the timer
 });
-
-// ... rest of the code remains unchanged
 
 
 function shuffleArray(array) {
@@ -171,4 +179,3 @@ retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
 
 displayQuestion();
-

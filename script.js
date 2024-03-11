@@ -44,7 +44,7 @@ let quizData;
     });
 
     function fetchQuizData() {
-        const jsonUrl = 'https://raw.githubusercontent.com/ravip333/aws-mcq-test/main/data.json';
+        const jsonUrl = 'https://raw.githubusercontent.com/your-username/your-repository/main/quiz-data.json';
 
         return fetch(jsonUrl)
             .then(response => {
@@ -156,8 +156,45 @@ let quizData;
         `;
     }
 
+    function retryQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        incorrectAnswers = [];
+        quizContainer.style.display = 'block';
+        submitButton.style.display = 'inline-block';
+        retryButton.style.display = 'none';
+        showAnswerButton.style.display = 'none';
+        resultContainer.innerHTML = '';
+        displayQuestion();
+    }
+
+    function showAnswer() {
+        quizContainer.style.display = 'none';
+        submitButton.style.display = 'none';
+        retryButton.style.display = 'inline-block';
+        showAnswerButton.style.display = 'none';
+
+        let incorrectAnswersHtml = '';
+        for (let i = 0; i < incorrectAnswers.length; i++) {
+            incorrectAnswersHtml += `
+                <p>
+                    <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+                    <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+                    <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+                </p>
+            `;
+        }
+
+        resultContainer.innerHTML = `
+            <p>You scored ${score} out of ${quizData.length}!</p>
+            <p>Incorrect Answers:</p>
+            ${incorrectAnswersHtml}
+        `;
+    }
+
     submitButton.addEventListener('click', checkAnswer);
     retryButton.addEventListener('click', retryQuiz);
     showAnswerButton.addEventListener('click', showAnswer);
 
     initializeQuiz();
+  </script>

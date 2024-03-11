@@ -1,55 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AWS Solution Architect Practice Exam</title>
-  <link rel="stylesheet" href="styles.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Bootstrap background color */
+    }
+
+    .container {
+      background-color: #ffffff; /* Container background color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .heading-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .heading {
+      font-size: 2em;
+      color: #007bff; /* Custom heading color */
+    }
+
+    .section-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .rules-container,
+    .test-detail-container,
+    .start-button-container {
+      text-align: center;
+    }
+
+    .rules-content {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #333; /* Custom text color */
+    }
+
+    .test-detail,
+    .test-detail__header,
+    .test-detail__content {
+      font-size: 1.2em;
+    }
+
+    .start-button-container {
+      padding-top: 50px;
+    }
+
+    .start-button {
+      width: 150px;
+      font-size: 1.2em;
+      background-color: #28a745; /* Custom button background color */
+      border-color: #28a745; /* Custom button border color */
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>AWS Solution Architect Practice Exam</h1>
-    <p>Time left: <span id="timer"></span></p>
+    <!-- Heading -->
+    <div class="heading-container">
+      <h1 class="heading">AWS Solution Architect Practice Exam</h1>
+    </div>
 
-    <!-- Rules Modal Button -->
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#rulesModal">
-      Rules
-    </button>
+    <!-- Rules -->
+    <div class="section-container rules-container">
+      <p class="rules-content">1. This practice exam contains AWS Solution Architect-related questions.</p>
+      <p class="rules-content">2. Answer all the questions before submitting the exam.</p>
+      <p class="rules-content">3. After submitting, review your answers and check the correct ones.</p>
+    </div>
 
-    <!-- Rules Modal -->
-    <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="rulesModalLabel">Rules</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>1. This practice exam contains AWS Solution Architect-related questions.</p>
-            <p>2. Answer all the questions before submitting the exam.</p>
-            <p>3. After submitting, review your answers and check the correct ones.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
+    <!-- Test Details -->
+    <div class="section-container test-detail-container">
+      <div class="test-detail">
+        <span class="test-detail__header">Test duration :</span>
+        <span class="test-detail__content">30 mins</span>
+      </div>
+      <div class="test-detail">
+        <span class="test-detail__header">No. of questions :</span>
+        <span class="test-detail__content">30 questions</span>
       </div>
     </div>
 
-    <div id="category-selector"></div>
-    <div id="quiz"></div>
-    <div id="result" class="result"></div>
-    <button id="submit" class="button">Submit</button>
-    <button id="retry" class="button hide">Retry</button>
-    <button id="showAnswer" class="button hide">Show Answer</button>
-  </div>
+    <!-- Start Button -->
+    <div class="section-container start-button-container">
+      <button class="btn btn-success start-button" onclick="openIndexHtml()">Start</button>
+    </div>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+    <script>
+      function openIndexHtml() {
+        // Specify the path to your HTML file
+        const htmlFilePath = 'index.html';
+  
+        // Open a new window or tab with the specified HTML file
+        window.open(htmlFilePath, '_blank');
+      }
+    </script>
+  </div>
 </body>
 </html>

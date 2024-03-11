@@ -7,6 +7,7 @@ const showAnswerButton = document.getElementById('showAnswer');
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     const quizTime = 130 * 60; // Convert minutes to seconds
     let timer = quizTime;
@@ -29,6 +30,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 1000);
 
+    // Fetch JSON data
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Store the fetched data in quizData
+            window.quizData = data;
+            // Display the first question
+            displayQuestion();
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 
     function displayResult() {
         clearInterval(timerInterval); // Stop the timer when the quiz ends
@@ -38,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
         showAnswerButton.style.display = 'inline-block';
         resultContainer.innerHTML = `Time's up! You scored ${score} out of ${quizData.length}!`;
     }
-    
+
     updateTimer(); // Initial display of the timer
 });
+
+// ... rest of the code remains unchanged
 
 
 function shuffleArray(array) {

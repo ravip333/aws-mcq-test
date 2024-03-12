@@ -110,27 +110,28 @@
     }
 
     function checkAnswer() {
-        const selectedOption = document.querySelector('input[name="quiz"]:checked');
-        if (selectedOption) {
-            const answer = selectedOption.value;
-            if (answer === quizData[currentQuestion].answer) {
-                score++;
-            } else {
-                incorrectAnswers.push({
-                    question: quizData[currentQuestion].question,
-                    incorrectAnswer: answer,
-                    correctAnswer: quizData[currentQuestion].answer,
-                });
-            }
-            currentQuestion++;
-            selectedOption.checked = false;
-            if (currentQuestion < quizData.length) {
-                displayQuestion();
-            } else {
-                displayResult();
-            }
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    if (selectedOption) {
+        const answer = selectedOption.value;
+        if (answer === quizData[currentQuestion].answer) {
+            score++;
+        } else {
+            incorrectAnswers.push({
+                question: quizData[currentQuestion].question,
+                incorrectAnswer: answer,
+                correctAnswer: quizData[currentQuestion].answer,
+            });
+        }
+        currentQuestion++;
+        selectedOption.checked = false;
+        if (currentQuestion < quizData.length) {
+            displayQuestion();
+        } else {
+            clearInterval(timerInterval); // Stop the timer when the last question is submitted
+            displayResult();
         }
     }
+}
 
     function displayResult() {
         quizContainer.style.display = 'none';

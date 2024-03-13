@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Page with Tiles</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+      background-color: #f8f9fa;
+    }
+
+    .sub-header {
+      text-align: center;
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .left-panel {
+      background-color: #f0f0f0; /* Adjust the color as needed */
+      padding: 20px;
+      border: solid rgb(101, 100, 100);
+      min-height: 100vh; /* Set the minimum height to cover the full page vertically */
+    }
+
+    .img-fluid {
+      height: 40%;
+    }
+
+    .tile h2 {
+      margin-top: 20%;
+    }
+
+    .tile {
+      border: 1px solid #dee2e6;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 50%; /* Ensure tile heights are the same */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left-Side Panel -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 left-panel">
+        <h2>"Embark on a Journey of Knowledge and Expertise"</h2>
+        <p>Absolutely! "It's time to learn and make expertise" is a great mindset for personal and professional development. Embracing continuous learning and building expertise can lead to numerous benefits, including career advancement, personal growth, and the ability to adapt to an ever-changing world. Remember, the journey of acquiring knowledge and skills is both fulfilling and empowering. Best of luck on your learning journey! If you have specific areas of expertise you're targeting or any questions, feel free to share, and I'll be happy to assist.
+        </p>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="col-md-9">
+        <!-- Sub-Header -->
+        <div class="sub-header">
+          <h2>Practice Exams for Certification</h2>
+        </div>
+
+        <!-- Tiles Section -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="practice_exam.html">
+                <div class="tile">
+                  <img src="img/aws.svg" alt="aws" class="img-fluid">
+                  <h2>AWS</h2>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <div class="tile">
+                <img src="img/terraform-color.svg" alt="Terraform" class="img-fluid">
+                <h2>Terraform</h2>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="tile">
+                <img src="img/github-original-wordmark.svg" alt="GitHub" class="img-fluid">
+                <h2>GitHub</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (optional, for Bootstrap features) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

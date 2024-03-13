@@ -14,7 +14,7 @@
       padding-top: 20px;
       position: relative; /* Set body position to relative */
     }
-
+   
     .main-container {
       display: flex;
       flex-direction: column;
@@ -22,6 +22,7 @@
       justify-content: center;
       min-height: 100vh;
       padding: 20px;
+      
     }
 
     .quiz-container {
@@ -94,16 +95,19 @@
       <div class="time-left" id="time-left">Time Left</div>
       <div id="timer"></div>
       <h1>AWS Solution Architect Practice Exam</h1>
-      <div id="category-selector"></div>
       <div id="quiz" class="mt-3"></div>
     </div>
 
     <div class="result-container">
       <div id="result" class="result"></div>
       <div class="btn-container">
-        <button id="submit" class="btn btn-primary">Submit</button>
-        <button id="retry" class="btn btn-secondary hide">Retry</button>
-        <button id="showAnswer" class="btn btn-success hide">Show Answer</button>
+        <button id="next" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+        <button id="submit" class="btn btn-primary" onclick="submitExam()">Submit Exam</button>
+        
+      </div>
+      <div>
+        <button id="showAnswer" class="btn btn-primary" onclick="showAnswer()">Show Answers</button>
+        <button id="retry" class="btn btn-primary" onclick="retryQuiz()">Retry</button>
       </div>
     </div>
   </div>

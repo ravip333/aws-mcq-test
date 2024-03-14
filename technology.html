@@ -3,100 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Page with Tiles</title>
+  <title>AWS Solution Architect Practice Exam</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      padding-top: 20px;
-      background-color: #f8f9fa;
+      background-color: #f8f9fa; /* Bootstrap background color */
     }
 
-    .sub-header {
-      text-align: center;
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 10px;
-      margin: 20px;
-    }
-
-    .left-panel {
-      background-color: #f0f0f0; /* Adjust the color as needed */
+    .container {
+      background-color: #ffffff; /* Container background color */
       padding: 20px;
-      border: solid rgb(101, 100, 100);
-      min-height: 100vh; /* Set the minimum height to cover the full page vertically */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
-    .img-fluid {
-      height: 40%;
-    }
-
-    .tile h2 {
-      margin-top: 20%;
-    }
-
-    .tile {
-      border: 1px solid #dee2e6;
-      padding: 20px;
+    .heading-container {
       text-align: center;
-      margin: 10px;
-      background-color: #ffffff;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      height: 50%; /* Ensure tile heights are the same */
+      margin-bottom: 20px;
+    }
+
+    .heading {
+      font-size: 2.5em;
+      color: #007bff; /* Custom heading color */
+    }
+
+    .section-container {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .rules-container,
+    .test-detail-container,
+    .start-button-container,
+    .Learn-about-topics {
+      margin-left: 20px;
+      margin-right: 20px;
+      align: center
+    }
+
+    .rules-content {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #333; /* Custom text color */
+    }
+
+    .test-detail,
+    .test-detail__header,
+    .test-detail__content {
+      font-size: 1.2em;
+    }
+
+    .start-button-container {
+      padding-top: 30px;
+      text-align: right;
+    }
+
+    .start-button {
+      width: 150px;
+      font-size: 1.2em;
+      background-color: #28a745; /* Custom button background color */
+      border-color: #28a745; /* Custom button border color */
     }
   </style>
 </head>
 <body>
-
-  <!-- Left-Side Panel -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 left-panel">
-        <h2>"Embark on a Journey of Knowledge and Expertise"</h2>
-        <p>Absolutely! "It's time to learn and make expertise" is a great mindset for personal and professional development. Embracing continuous learning and building expertise can lead to numerous benefits, including career advancement, personal growth, and the ability to adapt to an ever-changing world. Remember, the journey of acquiring knowledge and skills is both fulfilling and empowering. Best of luck on your learning journey! If you have specific areas of expertise you're targeting or any questions, feel free to share, and I'll be happy to assist.
-        </p>
+  <div class="container">
+    <!-- Heading -->
+    <div class="heading-container">
+      <h1 class="heading">AWS Solution Architect Practice Exam</h1>
+    </div>
+      <!-- Start Button -->
+      <div class="section-container start-button-container">
+        <button class="btn btn-success start-button" onclick="openIndexHtml()">Start Exam</button>
       </div>
-
-      <!-- Main Content Section -->
-      <div class="col-md-9">
-        <!-- Sub-Header -->
-        <div class="sub-header">
-          <h2>Practice Exams for Certification</h2>
-        </div>
-
-        <!-- Tiles Section -->
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="practice_exam.html">
-                <div class="tile">
-                  <img src="img/aws.svg" alt="aws" class="img-fluid">
-                  <h2>AWS</h2>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <div class="tile">
-                <img src="img/terraform-color.svg" alt="Terraform" class="img-fluid">
-                <h2>Terraform</h2>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="tile">
-                <img src="img/github-original-wordmark.svg" alt="GitHub" class="img-fluid">
-                <h2>GitHub</h2>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Rules -->
+    <div class="section-container rules-container">
+      <h2 class="section-header">Exam Information</h2>
+        <ul class="topics-list">
+          <li>This practice exam contains AWS Solution Architect-related questions.</li>
+          <li>Questions are similar to the actual exam.</li>
+          <li> After submitting, review your answers and check the correct ones.</li>
+        </ul>
+    </div>
+    <!-- Test Details -->
+    <div class="section-container test-detail-container">
+      <h2>Test Details</h2>
+      <div class="test-detail">
+        <span class="test-detail__header">Test duration :</span>
+        <span class="test-detail__content">130 mins</span>
+      </div>
+      <div class="test-detail">
+        <span class="test-detail__header">No. of questions :</span>
+        <span class="test-detail__content">60 questions</span>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap JS and jQuery (optional, for Bootstrap features) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Learn about topics -->
+    <div class="section-container Learn-about-topics">
+        <h2 class="section-header">Learn about topics:</h2>
+        <ul class="topics-list">
+          <li>Access Control</li>
+          <li>Amazon CloudFront</li>
+          <li>Amazon CloudWatch</li>
+          <li>Amazon DynamoDB</li>
+          <li>Amazon Elastic Block Store (Amazon EBS)</li>
+          <li>Amazon Elastic Compute Cloud (Amazon EC2)</li>
+          <li>Amazon Elastic MapReduce (Amazon EMR)</li>
+          <li>Amazon Redshift</li>
+          <li>Amazon Relational Database Service (Amazon RDS)</li>
+          <li>Amazon Resource Names (ARN)</li>
+          <li>Amazon Route 53</li>
+          <li>Amazon Simple Storage Service (Amazon S3)</li>
+          <li>Amazon Simple Queue Service (Amazon SQS)</li>
+          <li>Authentication & Authorization</li>
+          <li>Availability Zones</li>
+          <li>AWS CloudFormation</li>
+          <li>AWS CloudTrail</li>
+          <li>AWS CodeCommit</li>
+          <li>AWS CodeDeploy</li>
+          <li>AWS Direct Connect</li>
+          <li>AWS Identity and Access Management (AWS IAM)</li>
+          <li>AWS Key Management Service (AWS KMS)</li>
+          <li>AWS Storage Gateway</li>
+          <li>Cloud Concepts</li>
+          <li>Compliancy, Governance, Identity & Privacy</li>
+          <li>Elastic IP (EIP)</li>
+          <li>Inbound Data Traffic & Outbound Data Traffic</li>
+          <li>Input/Output operations Per Second (IOPS)</li>
+          <li>Public & Private Cloud</li>
+          <li>Service Level Agreement (SLA)</li>
+          <li>Software as a Service (SaaS)</li>
+          <li>Virtual Private Clouds (VPC)</li>
+        </ul>
+      </div>
+
+    
+  
+
+    <script>
+      function openIndexHtml() {
+        // Specify the path to your HTML file
+        const htmlFilePath = 'practice_exam.html';
+  
+        // Open a new window or tab with the specified HTML file
+        window.open(htmlFilePath, '_blank');
+      }
+    </script>
+  </div>
 </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "technology": [
+    {
+      "name": "AWS",
+      "content": {
+        "heading": "Amazon Web Services (AWS)",
+        "subheading": "Leading Cloud Computing Platform",
+        "paragraph": "Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon.com. It offers a mix of infrastructure as a service (IaaS), platform as a service (PaaS), and packaged software as a service (SaaS) offerings."
+      }
+    },
+    {
+      "name": "Terraform",
+      "content": {
+        "heading": "Terraform",
+        "subheading": "Infrastructure as Code (IaC) Tool",
+        "paragraph": "Terraform is an open-source infrastructure as code software tool created by HashiCorp. It allows users to define and provision data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON."
+      }
+    },
+    {
+      "name": "GitHub",
+      "content": {
+        "heading": "GitHub",
+        "subheading": "Version Control and Collaboration Platform",
+        "paragraph": "GitHub is a web-based platform used for version control and collaboration. It provides hosting for software development version control using Git and offers features such as bug tracking, task management, and wikis for every project."
+      }
+    }
+  ]
+}

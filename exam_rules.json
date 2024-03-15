@@ -1,28 +1,7 @@
 {
-  "technology": [
-    {
-      "name": "AWS",
-      "content": {
-        "heading": "Amazon Web Services (AWS)",
-        "subheading": "Leading Cloud Computing Platform",
-        "paragraph": "Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon.com. It offers a mix of infrastructure as a service (IaaS), platform as a service (PaaS), and packaged software as a service (SaaS) offerings."
-      }
-    },
-    {
-      "name": "Terraform",
-      "content": {
-        "heading": "Terraform",
-        "subheading": "Infrastructure as Code (IaC) Tool",
-        "paragraph": "Terraform is an open-source infrastructure as code software tool created by HashiCorp. It allows users to define and provision data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON."
-      }
-    },
-    {
-      "name": "GitHub",
-      "content": {
-        "heading": "GitHub",
-        "subheading": "Version Control and Collaboration Platform",
-        "paragraph": "GitHub is a web-based platform used for version control and collaboration. It provides hosting for software development version control using Git and offers features such as bug tracking, task management, and wikis for every project."
-      }
-    }
-  ]
+  "content": {
+    "heading": "AWS Solutions Architect Certification",
+    "subheading": "Prepare for Success",
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor justo vitae metus feugiat, sit amet congue felis bibendum. Phasellus id turpis dolor. Sed mattis erat nec ipsum ultricies, sit amet tincidunt libero dignissim. Nullam commodo turpis nec tortor ullamcorper, at aliquet orci tempor. Sed ac malesuada velit. Ut eu nunc sed odio tempor gravida. Vivamus at eros in dui accumsan malesuada. In hac habitasse platea dictumst. Nam vehicula auctor est, at efficitur urna varius at. In id elit enim. Duis lacinia dui eget tellus rhoncus, et tincidunt ex tincidunt. Aenean id malesuada nunc. Suspendisse potenti."
+  }
 }

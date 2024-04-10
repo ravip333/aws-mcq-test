@@ -12,7 +12,7 @@ let incorrectAnswers = [];
 let timerInterval; // Declare the timerInterval variable globally
 
 document.addEventListener("DOMContentLoaded", function () {
-    const quizTime = 5 * 60; // Convert minutes to seconds
+    const quizTime = 1 * 60 * 60; // Convert minutes to seconds
     let timer = quizTime;
 
     // Function to update the timer display
@@ -59,7 +59,7 @@ function fetchQuizData() {
         .then(data => {
             shuffleArray(data);
             // Select the first 10 questions
-            quizData = data.slice(0, 10);
+            quizData = data.slice(0, 150);
             return quizData;
         })
         .catch(error => {
